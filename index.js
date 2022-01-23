@@ -9,12 +9,20 @@ const schema = `
     type Query {
         hello: String
     }
+    type Mutation {
+        celciusToFahrenheit(celcius: Float!): Float
+    }
 
 `;
 
 const resolvers = {
   Query: {
     hello: () => 'Hello World!',
+  },
+  Mutation: {
+    celciusToFahrenheit: (root, args) => {
+      return (args.celcius * 9) / 5 + 32;
+    },
   },
 };
 
