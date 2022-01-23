@@ -3,9 +3,13 @@
   "version": "1.0.0",
   "main": "index.js",
   "license": "MIT",
+  "scripts": {
+    "dev": "nodemon index.js"
+  },
   "dependencies": {
     "fastify": "^3.27.0",
     "graphql": "^16.2.0",
-    "mercurius": "^9.1.0"
+    "mercurius": "^9.1.0",
+    "nodemon": "^2.0.15"
   }
 }
